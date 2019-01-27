@@ -1,0 +1,40 @@
+// MEDIA QUERIES PRE-SETTINGS 
+
+$breakpoints: (
+    "mobile":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mediaq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin before-overlay($width: 100%, $height: 100%, $opacity: 0.5, $content: "") {
+    content: $content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+    z-index: 2;
+    opacity: $opacity;
+}
+
+
+@mixin prefix($property, $parameters...) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+    #{$prefix}#{$property}: $parameters;
+  }
+}
+

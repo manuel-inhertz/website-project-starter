@@ -1,0 +1,62 @@
+
+header {
+	// Navbar overrides (change as you like)
+	.navbar {
+		padding: rem(30px) 0;
+		background-color: #fff;
+		.dropdown-menu {
+			top: rem(67px);
+			border-radius: 0;
+			border: none;
+			border-bottom: 2px solid red;
+			.dropdown-item {
+				&:hover {
+					background-color: red;
+					color: $text-color-light;
+				}
+			}
+		}
+		.navbar-toggler {
+			border: none;
+		}
+		.navbar-brand {
+			padding: 0;
+		}
+		.nav-item {
+			position: relative;
+			font-weight: bold;
+		}
+		.nav-item .nav-link:after {
+		    display: block;
+		    position: absolute;
+		    border: 0;
+		    margin: 0;
+		    left: 0.6rem;
+		    bottom: 0.5rem;
+		    content: "";
+		    height: 2px;
+		    width: 0;
+		    transition: 0.3s;
+		}
+
+		.nav-item:hover .nav-link,
+		.nav-item.show .nav-link {
+		    color: $text-color-blue;
+		}
+
+		.nav-item.active .nav-link {
+		    color: $text-color-blue;
+		}
+
+		.nav-item:hover .nav-link:after,
+		.nav-item.show .nav-link:after {
+		    background-color: $text-color-blue;
+		    width: 1.5rem;
+		}
+
+		.nav-item.active .nav-link:after {
+		    background-color: $text-color-blue;
+		    width: 1.5rem;
+		}
+	}
+}

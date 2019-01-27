@@ -1,0 +1,38 @@
+/*
+ * website-project-starter
+ *
+ * @DESCRIPTION
+ *
+ * A starter project structure for developing amazing websites with everything you need
+ *
+ * @author: Manuel InHertz
+ * @website: www.manuel-inhertz.com
+ */
+
+ //INCLUDES
+
+@import 'settings/variables';
+@import 'settings/functions';
+@import 'settings/mixins';
+
+/** GENERAL SYLING **/
+
+@import 'partials/fonts';
+@import 'partials/general';
+
+/** HEADER **/
+
+@import 'partials/header';
+@import 'partials/slider';
+
+/** CONTENT **/
+
+@import 'partials/content';
+
+/** FOOTER **/
+
+@import 'partials/footer';
+
+/** RESPONSIVE SYLING **/
+
+@import 'partials/responsive';
